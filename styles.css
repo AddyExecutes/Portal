@@ -1,0 +1,298 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 15px;
+}
+
+body {
+    background: linear-gradient(10deg, var(--gradient-bg-first), var(--gradient-bg-second));
+    height: 100vh;
+}
+
+body, html {
+    color: var(--text-color);
+    width: 100%;
+    letter-spacing: 1px;
+}
+
+#bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100vw;
+  min-height: 100vh;
+  object-fit: cover;
+  z-index: -1; /* behind everything */
+  opacity: 0.5; /* adjust for visibility */
+}
+
+
+/* font setup */
+
+@font-face {
+    font-family: 'Inter-regular';
+    src: url(Assets/Fonts/Inter-Regular.ttf) format(truetype);
+}
+
+.regular-font {
+    font-family: 'Inter-regular', sans-serif;
+}
+
+@font-face {
+    font-family: 'Inter-bold';
+    src: url(Assets/Fonts/Inter-Bold.ttf) format(truetype);
+}
+
+.bold-font {
+    font-family: 'Inter-bold', sans-serif;
+}
+
+
+
+/* variable setup */
+:root {
+    --main-bg: #000000;
+    --gradient-bg-first: #000000;
+    --gradient-bg-second: rgb(0, 61, 63);
+    --text-color: rgb(230, 230, 230);
+    --green-accent: #10B981;
+}
+
+
+
+/* special font 1 */
+.special-font-1 {
+    color: var(--green-accent);
+}
+
+
+
+
+
+
+h1 {
+    font-size: 5rem;
+    padding: 2vh 0%;
+}
+
+h2 {
+    font-size: 2rem;
+    padding: 2vh 0%;
+}
+
+p {
+    font-size: 1rem;
+    padding: 2vh 0%;
+}
+
+
+button {
+    border: none;
+    width: fit-content;
+    padding: 0.5%;
+    border-radius: 5px;
+    color: var(--text-color);
+    background-color: var(--green-accent);
+    transition: all 0.2s;
+}
+button:hover {
+    cursor: pointer;
+    transform: scale(0.9);
+}
+
+
+
+
+
+
+nav {
+    width: 100%;
+    padding: 2rem 3%;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    background-color: var(--main-bg);
+}
+
+.nav-link-container {
+    display: flex;
+    align-items: center;
+}
+
+.nav-link {
+    color: rgb(230, 230, 230);
+    text-decoration: none;
+    padding: 0.5rem 1.5rem;
+    transition: ease-in-out 0.2s;
+}
+
+.nav-link:hover {
+    color: var(--green-accent);
+}
+
+
+
+.nav-sm-link-container {
+    display: flex;
+    align-items: center;
+}
+.nav-sm-link {
+    padding: 0.5rem 1rem;
+}
+.nav-sm-link:hover {
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+.section-main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 90vh;
+}
+
+
+
+.intro-box {
+    width: 25vw;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0% 0% 0% 4%;
+}
+
+.intro-box .contact-button-container {
+    padding: 2vh 0%;
+}
+
+.intro-box .contact-button {
+    padding: 0vh 1vw;
+}
+
+
+
+
+.section-main .tiles-main-container {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
+.tile {
+    /* box-shadow: 0px 0px 10px var(--green-accent); */
+    border: 1px solid var(--green-accent);
+    background: linear-gradient(90deg, var(--gradient-bg-first), var(--gradient-bg-second));
+    border-radius: 12px;
+    padding: 10px 25px;
+    margin: 5px;
+    transition: all 0.2s ease-in-out;
+}
+
+.tile:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 0px 10px var(--green-accent);
+}
+
+
+
+.tiles-container1 {
+    display: flex;
+}
+
+
+.tiles-container2 {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.tile-cta-button {
+    padding: 5px 10px;
+    margin: 15px 0px 0px 0px;
+}
+
+
+.tile1-bio-tile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tile1-projects-tile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tile1-projects-tile .projects-tile-item {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+
+
+.tile2-tech-stack-item {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    padding: 5px 0px;
+}
+
+
+.tile2-tech-stack-item-img {
+    width: 24px;
+    padding: 0px 10px 0px 0px;
+}
+
+
+
+
+
+
+
+
+.xp-box {
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 12vw;
+}
+
+
+.xp-box .xp-item {
+    display: flex;
+    flex-direction: column;
+    margin: 2vh 0vw;
+    transition: all 0.2s ease-in-out;
+}
+.xp-box .xp-item:hover {
+    transform: scale(1.05);
+    text-shadow: 0px 0px 5px var(--green-accent);
+}
+
+.xp-box .xp-item .xp-heading {
+    display: flex;
+    justify-content: center;
+}
+
+.xp-box .xp-item .xp-description p {
+    display: flex;
+    justify-content: center;
+    padding: 0%;
+}
